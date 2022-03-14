@@ -6,6 +6,7 @@ class Tip(
     var text: String
 ) {
     fun getTip(): Double {
-        return bill + ( tipPercentage / 100 )
+        val mTip = bill * tipPercentage / 100
+        return mTip
     }
 }

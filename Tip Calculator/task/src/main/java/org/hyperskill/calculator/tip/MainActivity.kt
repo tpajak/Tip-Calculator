@@ -55,8 +55,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun updateTextView() {
+        var mTip = tip.getTip()
         if (tip.bill != 0.0) {
-            tipTextView.text = "Bill value: ${tip.text}, tip percentage: ${tip.tipPercentage}%"
+//            tipTextView.text = "Bill value: ${tip.text}, tip percentage: ${tip.tipPercentage}%"
+            tipTextView.text = "Tip amount: %.2f".format(mTip)
         } else {
             tipTextView.text = ""
         }
